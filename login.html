@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(login\ img/shopping-cart-bag-with-copy-space.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        html, body {
+            height: 100%;
+            background-color: white;
+        }
+
+        .global-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-form,
+        .signup-form,
+        .forgot-password-form {
+            width: 380px;
+            height: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .signup-form,
+        .forgot-password-form {
+            display: none;
+        }
+
+        .alt-f-full {
+            color: #000;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .alt-f {
+            color: #3676FF;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .mb-2 {
+            text-align: right;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            background: white;
+            color: black;
+            border: 2px solid blue;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border: none;
+            background: white;
+            color: black;
+            margin: 0;
+        }
+
+        .card-title {
+            color: #1b1b1b;
+            font-weight: 800;
+            padding-top: 20px;
+        }
+
+        .login-form,  
+        .signup-form, 
+        .forgot-password-form{
+            transform: translateY(-30px);
+        }
+
+        .btn {
+            background: #1b1b1b;
+            color: white;
+            transform: translateY(5px);
+            font-size: 14px;
+            border-radius: 40px;
+        }
+
+        .btn:hover{
+            background-color: gray;
+            color: white;
+        }
+
+        footer{
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 9px; font-family: sans-serif; font-weight: bold; color: white;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="padding-right: 15px; color: rgb(255, 0, 0); font-weight: 700; font-size: 25px;">GG.MU</a>
+        </div>
+    </nav>
+    <div class="global-container">
+        <div class="card login-form" id="loginFormContainer">
+            <div class="card-body">
+                <h1 class="card-title text-center">MASUK</h1>
+            </div>
+            <div class="card-text">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">ALAMAT EMAIL</label>
+                        <input type="email" class="form-control" required value placeholder="Masukan alamat email Anda" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">KATA SANDI</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-2">
+                        <a href="#" class="alt-f" id="forgotPasswordLink">LUPA SANDI ?</a>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn">Masuk</button><br>
+                        <div class="alt-f-full">
+                            Belum Menjadi Anggota ?
+                            <a href="#" class="alt-f" id="signUpLink">Daftar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card signup-form" id="signupFormContainer">
+            <div class="card-body">
+                <h1 class="card-title text-center">DAFTAR</h1>
+            </div>
+            <div class="card-text">
+                <form id="signupForm">
+                    <div class="mb-3">
+                        <label for="signupEmail" class="form-label">ALAMAT EMAIL</label>
+                        <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupPassword" class="form-label">KATA SANDI</label>
+                        <input type="password" class="form-control" id="signupPassword">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">KONFIRMASI KATA SANDI</label>
+                        <input type="password" class="form-control" id="confirmPassword">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn">Daftar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card forgot-password-form" id="forgotPasswordFormContainer">
+            <div class="card-body">
+                <h1 class="card-title text-center">ATUR ULANG KATA SANDI</h1>
+            </div>
+            <div class="card-text">
+                <form id="forgotPasswordForm">
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">KATA SANDI BARU</label>
+                        <input type="password" class="form-control" id="newPassword">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmNewPassword" class="form-label">KONFIRMASI KATA SANDI</label>
+                        <input type="password" class="form-control" id="confirmNewPassword">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn">Kirim</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-columns">
+        <div class="footer-col">
+              <p>HAK CIPTA © GG.MU., LTD. SEMUA HAK DILINDUNGI.</p>
+          </div>
+      </footer>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('exampleInputEmail1').value;
+            const password = document.getElementById('exampleInputPassword1').value;
+            if (!email) {
+                alert('Anda Belum Memasukan Email.');
+            } else if (!password) {
+                alert('Anda Belum Memasukan Password.');
+            } else {
+                window.location.href = 'index.html';
+            }
+        });
+
+        document.getElementById('signUpLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('loginFormContainer').style.display = 'none';
+            document.getElementById('signupFormContainer').style.display = 'block';
+        });
+
+        document.getElementById('forgotPasswordLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('loginFormContainer').style.display = 'none';
+            document.getElementById('forgotPasswordFormContainer').style.display = 'block';
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Anda berhasil mendaftar');
+            window.location.href = 'login.html';
+        });
+
+        document.getElementById('forgotPasswordForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Anda berhasil memperbarui Kata Sandi');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
